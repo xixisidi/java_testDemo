@@ -1,0 +1,97 @@
+if (DwrSystem == null) var DwrSystem = {};DwrSystem.updateSystemUserPassword= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','updateSystemUserPassword',p0,p1,p2,callback);}
+DwrSystem.resetSystemUserPassword= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','resetSystemUserPassword',p0,callback);}
+DwrSystem.freezeSystemUser= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','freezeSystemUser',p0,callback);}
+DwrSystem.unfreezeSystemUser= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','unfreezeSystemUser',p0,callback);}
+DwrSystem.deleteSystemUser= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','deleteSystemUser',p0,callback);}
+DwrSystem.validateSystemUserName= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','validateSystemUserName',p0,p1,callback);}
+DwrSystem.assignSystemUser= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','assignSystemUser',p0,p1,callback);}
+DwrSystem.deleteSystemRole= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','deleteSystemRole',p0,callback);}
+DwrSystem.listSystemUserAgency= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','listSystemUserAgency',p0,callback);}
+DwrSystem.listSystemUserRole= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','listSystemUserRole',p0,callback);}
+DwrSystem.listSystemRole= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystem','listSystemRole',p0,callback);}
+if (DwrCourse == null) var DwrCourse = {};DwrCourse.listCourseSortsByAgencyId= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listCourseSortsByAgencyId',p0,callback);}
+DwrCourse.addCourseSorts= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','addCourseSorts',p0,p1,p2,callback);}
+DwrCourse.listCourseSorts= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listCourseSorts',p0,p1,callback);}
+DwrCourse.updateCourseSort= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','updateCourseSort',p0,p1,p2,callback);}
+DwrCourse.deleteCourseSort= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','deleteCourseSort',p0,p1,callback);}
+DwrCourse.updateSortsOfSeq= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','updateSortsOfSeq',p0,p1,callback);}
+DwrCourse.removeCourseVedio= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','removeCourseVedio',p0,callback);}
+DwrCourse.updateCourseServer= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','updateCourseServer',p0,p1,p2,callback);}
+DwrCourse.listEndCourse= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listEndCourse',p0,callback);}
+DwrCourse.listStudentOfVideo= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listStudentOfVideo',p0,callback);}
+DwrCourse.listStudentByCourse= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listStudentByCourse',p0,p1,callback);}
+DwrCourse.listCourseTimesByCourseId= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listCourseTimesByCourseId',p0,callback);}
+DwrCourse.autoGetTag= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','autoGetTag',p0,callback);}
+DwrCourse.cancelPublishCourse= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','cancelPublishCourse',p0,callback);}
+DwrCourse.enablePublishCourse= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','enablePublishCourse',p0,callback);}
+DwrCourse.deleteCourse= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','deleteCourse',p0,callback);}
+DwrCourse.deletePreviewVideo= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','deletePreviewVideo',p0,callback);}
+DwrCourse.listCourseOfCombo= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listCourseOfCombo',p0,callback);}
+DwrCourse.listCourseOfCanCombo= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','listCourseOfCanCombo',p0,callback);}
+DwrCourse.savePushAgencys= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','savePushAgencys',p0,p1,callback);}
+DwrCourse.deleteCoursePushByPushId= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrCourse','deleteCoursePushByPushId',p0,p1,p2,callback);}
+if (DwrAgency == null) var DwrAgency = {};DwrAgency.searchRegions= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','searchRegions',p0,callback);}
+DwrAgency.deleteAgencyTerm= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','deleteAgencyTerm',p0,p1,callback);}
+DwrAgency.shieldCourseComment= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','shieldCourseComment',p0,p1,callback);}
+DwrAgency.unshieldCourseComment= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','unshieldCourseComment',p0,p1,callback);}
+DwrAgency.getAgencySchoolsByAgencyId= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','getAgencySchoolsByAgencyId',p0,p1,callback);}
+DwrAgency.listPushAgencyOfCourse= function(p0,p1,p2,p3,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','listPushAgencyOfCourse',p0,p1,p2,p3,callback);}
+DwrAgency.listAgencys= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','listAgencys',p0,callback);}
+DwrAgency.getPushAgency= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgency','getPushAgency',p0,callback);}
+if (DwrAgent == null) var DwrAgent = {};DwrAgent.addAgent= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgent','addAgent',p0,p1,p2,callback);}
+DwrAgent.updateAgent= function(p0,p1,p2,p3,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgent','updateAgent',p0,p1,p2,p3,callback);}
+DwrAgent.showAgent= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgent','showAgent',p0,callback);}
+if (DwrAgencyServer == null) var DwrAgencyServer = {};DwrAgencyServer.listAllServer= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencyServer','listAllServer',p0,callback);}
+DwrAgencyServer.saveServer2Agency= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencyServer','saveServer2Agency',p0,p1,callback);}
+DwrAgencyServer.delServer2Agency= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencyServer','delServer2Agency',p0,p1,callback);}
+if (DwrAgencySchool == null) var DwrAgencySchool = {};DwrAgencySchool.saveSchool4Agency= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencySchool','saveSchool4Agency',p0,p1,callback);}
+DwrAgencySchool.delSchool4Agency= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencySchool','delSchool4Agency',p0,p1,callback);}
+if (DwrSchool == null) var DwrSchool = {};DwrSchool.getSchoolByName= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSchool','getSchoolByName',p0,callback);}
+DwrSchool.getSchoolByCode= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSchool','getSchoolByCode',p0,callback);}
+DwrSchool.getSchools= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSchool','getSchools',p0,callback);}
+DwrSchool.getSchoolsByRegion= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSchool','getSchoolsByRegion',p0,p1,callback);}
+if (DwrServer == null) var DwrServer = {};DwrServer.listServerByAgencyId= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','listServerByAgencyId',p0,callback);}
+DwrServer.listServerOfPCity= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','listServerOfPCity',p0,callback);}
+DwrServer.startServer= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','startServer',p0,callback);}
+DwrServer.stopServer= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','stopServer',p0,callback);}
+DwrServer.deleteServer= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','deleteServer',p0,callback);}
+DwrServer.listNoAgency= function(callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','listNoAgency',callback);}
+DwrServer.listAgencys= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','listAgencys',p0,callback);}
+DwrServer.listAgencyBySId= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','listAgencyBySId',p0,callback);}
+DwrServer.updateServerByaIds= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrServer','updateServerByaIds',p0,p1,callback);}
+if (DwrUser == null) var DwrUser = {};DwrUser.listUserTeacher= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','listUserTeacher',p0,p1,p2,callback);}
+DwrUser.getAgencyList= function(callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','getAgencyList',callback);}
+DwrUser.addStudentSort= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','addStudentSort',p0,p1,callback);}
+DwrUser.getStudentSort= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','getStudentSort',p0,callback);}
+DwrUser.updateStudentSort= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','updateStudentSort',p0,p1,p2,callback);}
+DwrUser.deleteStudentSort= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','deleteStudentSort',p0,callback);}
+DwrUser.resetTeacherPassword= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','resetTeacherPassword',p0,callback);}
+DwrUser.deleteUserTeacher= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','deleteUserTeacher',p0,p1,callback);}
+DwrUser.listUserTeacherByAgencyId= function(p0,p1,p2,p3,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','listUserTeacherByAgencyId',p0,p1,p2,p3,callback);}
+DwrUser.listStudentSortByAgencyId= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','listStudentSortByAgencyId',p0,callback);}
+DwrUser.showStudentPassword= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','showStudentPassword',p0,callback);}
+DwrUser.resetStudentPassword= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','resetStudentPassword',p0,callback);}
+DwrUser.listUserStudentSort= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','listUserStudentSort',p0,callback);}
+DwrUser.moveUserStudent= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','moveUserStudent',p0,p1,callback);}
+DwrUser.listSchoolName= function(p0,p1,p2,p3,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','listSchoolName',p0,p1,p2,p3,callback);}
+DwrUser.checkAgencyStudentRule= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','checkAgencyStudentRule',p0,callback);}
+DwrUser.deleteUserStudent= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','deleteUserStudent',p0,p1,callback);}
+DwrUser.cancelStudent= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','cancelStudent',p0,callback);}
+DwrUser.recoverStudent= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrUser','recoverStudent',p0,callback);}
+<<<<<<< .mine
+if (DwrSystemRegion == null) var DwrSystemRegion = {};DwrSystemRegion.listProvinces= function(callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystemRegion','listStationProvince',callback);}
+DwrSystemRegion.listCitys= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystemRegion','listStationCity',p0,callback);}
+DwrSystemRegion.listCountys= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrSystemRegion','listStationCounty',p0,callback);}
+if (DwrFunds == null) var DwrFunds = {};DwrFunds.exportCardsResult= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrFunds','exportCardsResult',p0,callback);}
+=======
+if (DwrSystemRegion == null) var DwrSystemRegion = {};if (DwrFunds == null) var DwrFunds = {};DwrFunds.exportCardsResult= function(callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrFunds','exportCardsResult',callback);}
+>>>>>>> .r2499
+DwrFunds.deleteBankCharge= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrFunds','deleteBankCharge',p0,callback);}
+DwrFunds.doActionBankCharge= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrFunds','doActionBankCharge',p0,p1,p2,callback);}
+if (DwrVipUser == null) var DwrVipUser = {};DwrVipUser.addVipAccount= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','addVipAccount',p0,callback);}
+DwrVipUser.deleteVipAccount= function(p0,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','deleteVipAccount',p0,callback);}
+DwrVipUser.selectVipTeacher= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','selectVipTeacher',p0,p1,callback);}
+DwrVipUser.cancleVipTeacher= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','cancleVipTeacher',p0,p1,callback);}
+DwrVipUser.vipReportCourse= function(p0,p1,p2,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','vipReportCourse',p0,p1,p2,callback);}
+DwrVipUser.listCourseOfCanReport= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrVipUser','listCourseOfCanReport',p0,p1,callback);}
+if (DwrAgencyBulletin == null) var DwrAgencyBulletin = {};DwrAgencyBulletin.ResetPushBulletins= function(p0,p1,callback){dwr.engine._execute(dwr.engine._defaultPath,'DwrAgencyBulletin','ResetPushBulletins',p0,p1,callback);}

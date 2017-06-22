@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+    <!-- 缓存服务的注解 -->
+    <aop:config>
+        <aop:pointcut id="cacheMethods" expression="execution(* net.zdsoft.netstudy..service..*.*(..)) and 
+        	@annotation(net.zdsoft.keel.cache.annotation.Cacheable)" />  
+        <aop:pointcut id="flushMethods" expression="execution(* net.zdsoft.netstudy..service..*.*(..)) and  
+        	@annotation(net.zdsoft.keel.cache.annotation.CacheFlush)" />  
+        <aop:aspect id="cacheAspect" ref="methodCacheAspect">  
+            <aop:around method="executeMethod" pointcut-ref="cacheMethods" />  
+        </aop:aspect>  
+        <aop:aspect id="cacheFlushAspect" ref="methodCacheAspect">  
+            <aop:after method="flushMethodCache" pointcut-ref="flushMethods" />  
+        </aop:aspect>  
+    </aop:config> 
+    <!-- 定义方法缓存拦截器 --> 
+    <bean id="methodCacheAspect" class="net.zdsoft.keel.cache.aop.MethodCacheAspect" init-method="initialize" 
+        destroy-method="destroy">  
+        <property name="cacheManager" ref="cacheManager" />  
+        <property name="cache" ref="cacheBean">  
+        </property>  
+    </bean>  
+
+    <!-- 缓存的额创建与刷新 -->
+    <bean id="cacheManager" class="net.zdsoft.keel.cache.DefaultCacheManager" destroy-method="shutdown" />
+    <!-- 初始化创建缓存 -->
+    <bean id="cacheBean" class="net.zdsoft.netstudy.common.cache.CacheProviderFactoryBean" />
+    
+    <!-- 文件服务器初始化 -->
+    <bean class="net.zdsoft.netstudy.common.filesystem.util.FileSystemInitBean" lazy-init="default" autowire="byName"/>
+</beans>

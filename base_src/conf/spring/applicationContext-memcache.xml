@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+        
+    <!-- 缓存服务的注解 -->
+    <aop:config>
+        <aop:pointcut id="cacheMethods" expression="execution(* com.net.zxz..service..*.*(..)) and @annotation(com.net.zxz.memcache.annotation.Cacheable)" />  
+        <aop:aspect id="cacheAspect" ref="methodCacheAspect">  
+            <aop:around method="executeMethod" pointcut-ref="cacheMethods" />  
+        </aop:aspect>
+    </aop:config> 
+    <!-- 定义方法缓存拦截器 --> 
+    <bean id="methodCacheAspect" class="com.net.zxz.memcache.MethodCacheAspect" init-method="initialize">
+        <property name="memcachedManager" ref="memcachedManager" />
+    </bean>  
+
+    <bean id="memcachedManager" class="com.net.zxz.memcache.MemcachedManager"/>
+</beans>

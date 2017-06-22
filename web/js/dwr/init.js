@@ -1,0 +1,1 @@
+dwr.engine._defaultPath = 'dwr';

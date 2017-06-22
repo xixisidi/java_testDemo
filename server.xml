@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Server port="8006" shutdown="SHUTDOWN">
+  <!--APR library loader. Documentation at /docs/apr.html -->
+  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
+  <!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html -->
+  <Listener className="org.apache.catalina.core.JasperListener"/>
+  <!-- Prevent memory leaks due to use of particular java/javax APIs-->
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+  <!-- JMX Support for the Tomcat server. Documentation at /docs/non-existent.html -->
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+  <GlobalNamingResources>
+    <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+  </GlobalNamingResources>
+
+  <Service name="Catalina">
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+	<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
+    <Engine defaultHost="localhost" name="Catalina">
+      <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
+	  <!--GX-S netstudy5-mobile GX-S-->
+	    <Host appBase="webapps" autoDeploy="false" name="localhost" unpackWARs="false" xmlNamespaceAware="false" xmlValidation="false">
+            <Context docBase="E:\MyWork\netstudy\netstudy_v5_agency\web" path=""/> 
+			<Alias>www.netstudy5.dev</Alias>
+			<Alias>file.netstudy5.dev</Alias>
+		</Host>
+		<Host appBase="webapps" autoDeploy="false" name="remote.netstudy5.dev" unpackWARs="false" xmlNamespaceAware="false" xmlValidation="false">
+            <Context docBase="E:\MyWork\netstudy\netstudy_v5_remote\web" path=""/> 
+        </Host>
+        <Host name="uploadfile.netstudy5.dev" appBase="webapps" unpackWARs="false" autoDeploy="false" xmlValidation="false" xmlNamespaceAware="false">
+            <Context docBase="\\192.168.20.2\store\netstudy5" path=""/> 
+        </Host>
+		<Host appBase="webapps" autoDeploy="false" name="storage.netstudy5.dev" unpackWARs="false" xmlNamespaceAware="false" xmlValidation="false">
+            <Context docBase="E:\MyWork\netstudy\netstudy_v5_storage\web" path="" useHttpOnly="false"/> 
+        </Host>
+		<Host appBase="webapps" autoDeploy="false" name="cms.netstudy5.dev" unpackWARs="false" xmlNamespaceAware="false" xmlValidation="false">
+            <Context docBase="E:\MyWork\netstudy\netstudy_v5_cms\web" path="" useHttpOnly="false"/> 
+        </Host>
+    </Engine>
+  </Service>
+</Server>
