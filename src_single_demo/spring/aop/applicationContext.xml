@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="beforeAdvice" class="spring.aop.BeforeAdvice"></bean>
+	<bean id="afterAdvice" class="spring.aop.AfterAdvice"></bean>
+	<bean id="compareInterceptor" class="spring.aop.CompareInterceptor"></bean>
+	<bean id="studenttarget" class="spring.aop.StudentImpl"></bean>
+
+	<bean id="student" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>spring.aop.IStudent</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>beforeAdvice</value>
+				<value>afterAdvice</value>
+				<value>compareInterceptor</value>
+			</list>
+		</property>
+		<property name="target">
+			<ref bean="studenttarget" />
+		</property>
+	</bean>
+</beans>
